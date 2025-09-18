@@ -1,8 +1,8 @@
 {
     "id": 2,
     "nome": "Manoel Antunes",
-    "email": "manoel@email.com",
     "idade": 26,
+    "email": "manoel@email.com",
     "telefones": [
         {
             "id": 1,
