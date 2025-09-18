@@ -1,6 +1,8 @@
 package com.example.jpa_h2_demo.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -12,12 +14,14 @@ public class Cliente {
 
     private String nome;
     private String email;
-    private String cpf;
+    private Integer idade;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Telefone> telefones;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Endereco> enderecos;
 
 	public Long getId() {
@@ -44,12 +48,12 @@ public class Cliente {
 		this.email = email;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public Integer getIdade() {
+		return idade;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setIdade(Integer idade) {
+		this.idade = idade;
 	}
 
 	public List<Telefone> getTelefones() {

@@ -1,6 +1,13 @@
 package com.example.jpa_h2_demo.model;
 
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Endereco {
@@ -10,6 +17,7 @@ public class Endereco {
     private Long id;
 
     private String logradouro;
+    private String endereco;
     private String numero;
     private String bairro;
     private String cidade;
@@ -18,6 +26,7 @@ public class Endereco {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
+    @JsonBackReference
     private Cliente cliente;
 
 	public Long getId() {
@@ -82,6 +91,14 @@ public class Endereco {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 }
