@@ -19,8 +19,7 @@
                 "numero": "100",
                 "bairro": "CENTRO",
                 "cidade": "CIDADE DO NORTE",
-                "estado": "SP",
-                "cep": null
+                "estado": "SP"
             }
         ]
     },
@@ -49,8 +48,7 @@
                 "numero": "487",
                 "bairro": "JARDIM BONITO",
                 "cidade": "CIDADE DO NORTE",
-                "estado": "SP",
-                "cep": null
+                "estado": "SP"
             }
         ]
     }

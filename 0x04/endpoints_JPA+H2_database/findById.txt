@@ -23,8 +23,7 @@
             "numero": "487",
             "bairro": "JARDIM BONITO",
             "cidade": "CIDADE DO NORTE",
-            "estado": "SP",
-            "cep": null
+            "estado": "SP"
         }
     ]
 }
